@@ -1,0 +1,23 @@
+{
+  "tests/test_nykaa_mom_baby_e2e.py::TestPositiveCases::test_TC_01_login_otp_filter_brand_usage_add_to_cart": true,
+  "tests/test_nykaa_mom_baby_e2e.py::TestPositiveCases::test_TC_02_guest_brand_filter_add_to_cart": true,
+  "tests/test_nykaa_mom_baby_e2e.py::TestPositiveCases::test_TC_03_brand_filter_only_add_to_cart": true,
+  "tests/test_nykaa_mom_baby_e2e.py::TestNegativeCases::test_TC_05_empty_cart_verification": true,
+  "tests/test_nykaa_mom_baby_e2e.py::TestPositiveCases::test_TC_03_add_product_to_cart": true,
+  "tests/test_nykaa_mom_baby_e2e.py::TestNegativeCases::test_TC_04_invalid_brand_filter[InvalidBrandXYZ-99999]": true,
+  "tests/test_nykaa_mom_baby_e2e.py::TestNegativeCases::test_TC_04_invalid_brand_filter[-00000]": true,
+  "tests/test_nykaa_mom_baby_e2e.py::TestNegativeCases::test_TC_05_empty_cart_message": true,
+  "tests/test_nykaa_mom_baby_e2e.py::TestPositiveCases::test_TC_01_apply_brand_filter[brand_mamaearth]": true,
+  "tests/test_nykaa_mom_baby_e2e.py::TestPositiveCases::test_TC_01_apply_brand_filter[brand_himalaya]": true,
+  "tests/test_nykaa_mom_baby_e2e.py::TestPositiveCases::test_TC_02_apply_sort[sort_popularity]": true,
+  "tests/test_nykaa_mom_baby_e2e.py::TestPositiveCases::test_TC_02_apply_sort[sort_price_low]": true,
+  "tests/test_nykaa_mom_baby_e2e.py::TestPositiveCases::test_TC_02_apply_sort[sort_new_launch]": true,
+  "tests/test_nykaa_mom_baby_e2e.py::TestNegativeCases::test_TC_04_invalid_brand_search_in_filter[invalid_brand_xyz]": true,
+  "tests/test_nykaa_mom_baby_e2e.py::TestNegativeCases::test_TC_04_invalid_brand_search_in_filter[invalid_brand_abc]": true,
+  "tests/test_nykaa_mom_baby_e2e.py::TestPositiveCases::test_TC_02_sort_products[sort_Popularity]": true,
+  "tests/test_nykaa_mom_baby_e2e.py::TestPositiveCases::test_TC_02_sort_products[sort_PriceLow]": true,
+  "tests/test_nykaa_mom_baby_e2e.py::TestPositiveCases::test_TC_03_add_to_cart": true,
+  "tests/test_nykaa_mom_baby_e2e.py::TestNegativeCases::test_TC_04_invalid_brand_search[invalid_NoSuchBrand]": true,
+  "tests/test_nykaa_mom_baby_e2e.py::TestNegativeCases::test_TC_05_empty_cart": true,
+  "tests/test_nykaa_mom_baby_e2e.py::TestNegativeCases::test_TC_05_conflicting_filters_no_results": true
+}
