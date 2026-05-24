@@ -1,0 +1,96 @@
+{
+  "project": "Nykaa Mom & Baby Selenium Automation",
+  "module": "Mom & Baby",
+  "url": "https://www.nykaa.com/mom-and-baby/c/3165",
+
+  "login_data": {
+    "valid": {
+      "phone": "9441211174",
+      "otp": "ENTER_OTP_HERE",
+      "expected": "Login successful"
+    },
+    "invalid": [
+      {
+        "scenario": "Alphabetic phone",
+        "phone": "abc123",
+        "expected": "Error: Invalid phone number",
+        "test_type": "Negative"
+      },
+      {
+        "scenario": "Short phone number",
+        "phone": "12345",
+        "expected": "Error: Phone must be 10 digits",
+        "test_type": "Negative"
+      },
+      {
+        "scenario": "Empty phone number",
+        "phone": "",
+        "expected": "Error: Phone required",
+        "test_type": "Negative"
+      },
+      {
+        "scenario": "Special characters",
+        "phone": "@@##$$%%",
+        "expected": "Error: Invalid phone number",
+        "test_type": "Negative"
+      }
+    ]
+  },
+
+  "filter_data": {
+    "brand": {
+      "primary": "Mamaearth",
+      "secondary": "Himalaya",
+      "invalid": "InvalidBrandXYZ"
+    },
+    "usage": "Baby"
+  },
+
+  "test_cases": [
+    {
+      "tc_id": "TC_01",
+      "type": "Positive",
+      "description": "OTP Login → Mom & Baby → Brand(Mamaearth) + Usage(Baby) Filter → Add to Cart → Verify Cart",
+      "phone": "9441211174",
+      "brand_filter": "Mamaearth",
+      "usage_filter": "Baby",
+      "expected": "Product added to cart successfully"
+    },
+    {
+      "tc_id": "TC_02",
+      "type": "Positive",
+      "description": "Guest User → Mom & Baby → Brand Filter(Mamaearth) → Add Product → Verify Cart",
+      "phone": "Guest",
+      "brand_filter": "Mamaearth",
+      "usage_filter": "None",
+      "expected": "Product visible in cart as guest"
+    },
+    {
+      "tc_id": "TC_03",
+      "type": "Positive",
+      "description": "Brand Filter only → Verify product list > 0 → Add to Cart → Verify count >= 1",
+      "phone": "Guest",
+      "brand_filter": "Mamaearth",
+      "usage_filter": "None",
+      "expected": "Cart item count >= 1 after adding product"
+    },
+    {
+      "tc_id": "TC_04",
+      "type": "Negative",
+      "description": "Enter invalid phone number (abc123) → Verify error message shown",
+      "phone": "abc123",
+      "brand_filter": "N/A",
+      "usage_filter": "N/A",
+      "expected": "Error message displayed / OTP not sent"
+    },
+    {
+      "tc_id": "TC_05",
+      "type": "Negative",
+      "description": "Navigate directly to cart without adding product → Verify empty/login prompt",
+      "phone": "Guest",
+      "brand_filter": "N/A",
+      "usage_filter": "N/A",
+      "expected": "Empty cart message OR login prompt shown"
+    }
+  ]
+}
